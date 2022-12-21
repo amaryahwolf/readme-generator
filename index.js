@@ -48,7 +48,7 @@ const questions = [
     {
         type: 'list',
         message: 'Which license did you use?',
-        choices: ['MIT', 'GPL', 'Apache', 'None'],
+        choices: ['MIT', 'GPLv2', 'Apache', 'None'],
         name: 'license'
     },
     {
@@ -73,6 +73,8 @@ const questions = [
     },
 ];
 
+
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
@@ -87,7 +89,8 @@ function init() {
     inquirer
     .prompt (questions)
     .then((response)=> {
-        writeToFile("README.md", generateMarkdown(response))
+        const filename = `${response.title.toLowerCase().split(' ').join('')}.md`;
+        writeToFile(filename, generateMarkdown(response))
         console.log(response)
     }
     )
