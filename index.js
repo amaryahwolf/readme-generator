@@ -15,17 +15,6 @@ const questions = [
         name: 'description'
     },
     {
-        type: 'checkbox',
-        message: 'What do you want included in your table of contents?',
-        choices: [
-          'Installation',
-          'Usage',
-          'Credits',
-          'License',
-        ],
-        name: 'tableOfContents',
-    },
-    {
         type: 'input',
         message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.',
         name: 'installation'
