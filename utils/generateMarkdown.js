@@ -15,7 +15,7 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license !== "none") {
+  if (license !== 'None') {
     return `- [License](#license)`
   } else {
     return ``
@@ -25,11 +25,11 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  if (data.license !== 'None') {
+  if (license !== 'None') {
     return `## License
-    This application is covered under the ${data.license} license.`
+This application is covered under the ${license} license.`
   } else {
-    return `` 
+    return `N/A` 
   }
 }
 
@@ -37,8 +37,38 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `# ${data.title}
  
-  ${renderLicenseBadge(data.license)}
+${renderLicenseBadge(data.license)}
 
+## Description
+${data.description}
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+${renderLicenseLink(data.license)}
+
+## Installation
+${data.installation}
+
+## Usage
+${data.usage}
+![Screenshot of application](${data.screenshot})
+
+## Credits
+${data.credits}
+
+## License
+${renderLicenseSection(data.license)}
+
+## Contributing
+${data.contributing}
+
+## Tests
+${data.tests}
+
+## Questions
+For additional questions, find me on [github](https://github.com/${data.github}) or email me at ${data.email}.
 `;
 }
 
