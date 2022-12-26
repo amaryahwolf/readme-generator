@@ -18,6 +18,7 @@ To install this command-line tool, first pull the code. Then, in your command-li
 
 ## Usage
 After the tool is installed and run, you will be prompted with a series of questions regarding your README. Respond to the questions accordingly, and if there are sections without content, respond 'N/A.' After responding to all prompts, a markdown file will be created and named with the title of your application. After you have moved the file to the appropriate folder or workspace, be sure to rename the file 'README.md' to follow proper naming syntax.
+[Video walkthrough of README Generator](https://drive.google.com/file/d/1WJxiPMeSTaFpVNFCK-rjiIzQ50bUPwyN/view?usp=share_link)
 ![Screenshot of application](./assets/readmegenerator-screenshot.png)
 
 ## Credits
