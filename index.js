@@ -80,7 +80,6 @@ function init() {
     .then((response)=> {
         const filename = `${response.title.toLowerCase().split(' ').join('')}.md`;
         writeToFile(filename, generateMarkdown(response))
-        console.log(response)
     }
     )
 }
