@@ -45,7 +45,7 @@ const questions = [
         message: 'Enter your contribution guidelines:',
         name: 'contributing',
     },
-    { 
+    {
         type: 'input',
         message: 'Enter your test guidelines:',
         name: 'tests',
@@ -67,7 +67,7 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
-        if(err) throw err 
+        if (err) throw err
         console.log("Input received!")
     }
     )
@@ -76,12 +76,12 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     inquirer
-    .prompt (questions)
-    .then((response)=> {
-        const filename = `${response.title.toLowerCase().split(' ').join('')}.md`;
-        writeToFile(filename, generateMarkdown(response))
-    }
-    )
+        .prompt(questions)
+        .then((response) => {
+            const filename = `${response.title.toLowerCase().split(' ').join('')}.md`;
+            writeToFile(filename, generateMarkdown(response))
+        }
+        )
 }
 
 // Function call to initialize app
